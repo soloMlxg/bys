@@ -3,3 +3,112 @@
 	width: 750rpx;
 	height: 900rpx;
 }
+.priceStr{
+	color: red;
+	font-size: 23px;
+	margin-top: 15rpx;
+}
+.supplier{
+	font-size: 12px;
+	color: orange;
+	margin-top: 10rpx;
+}
+.sizeList{
+	font-size: 19px;
+	margin-top: 30rpx;
+}
+.salePoint{
+	font-size: 12px;
+	color: gray;
+	margin-top: 10rpx;
+}
+.jsbox{
+	padding: 0 0 0 20rpx;
+}
+.pjbox_hd{	
+	width: 700rpx;
+	margin: auto;
+	margin-top: 100rpx;
+	padding: 0 0 20rpx 0;
+}
+.tops_img{
+	width: 50rpx;
+	height: 50rpx;
+	border-radius: 50%;
+	display: inline-block;
+}
+.pjrw{
+	width: 700rpx;
+	margin: auto;
+	margin-top: 50rpx;
+	border-bottom: 1px solid gray;
+}
+.userName{
+	display: inline-block;
+	position: relative;
+	top: -10rpx;
+	left: 7rpx;
+}
+.vip{
+	display: inline-block;
+	font-size: 12px;
+	color: orange;
+	padding: 2rpx 10rpx;
+	background-color: pink;
+	position: relative;
+	top: -20rpx;
+	left: 10rpx;
+}
+.times{
+	font-size: 13px;
+	color: gray;
+}
+.text{
+	margin-top: 20rpx;
+}
+.tls{
+	width: 700rpx;
+	margin: auto;
+	margin-top: 100rpx;
+}
+.tls_imgt{
+	display: inline-block;
+	width: 100rpx;
+	height: 100rpx;
+}
+.tls_title{
+	display: inline-block;
+	height: 100rpx;
+	position: relative;
+	top: -15rpx;
+	font-size: 12px;
+	color: gray;
+	margin-left: 30rpx;
+}
+.tls_name{
+	font-size: 15px;
+	color: black;
+}
+.hots{
+	width: 750rpx;
+	height: 300rpx;
+	position: relative;
+}
+.hots_list{
+	position: absolute;
+	height: 300rpx;
+	white-space: nowrap;
+}
+.hots_list view{
+	display: inline-block;
+	padding: 1rpx 20rpx ;
+	font-size: 14px;
+	width: 300rpx;
+	height: 450rpx;
+	text-align:chenter;
+}
+.hots_imgs{
+	width: 200rpx;
+	height: 200rpx;
+	display: block;
+}

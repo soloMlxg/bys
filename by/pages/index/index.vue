@@ -1,4 +1,7 @@
 <template>
+	<view class="gg">
+		<image class="gg" src="../../static/icon/微信截图1.png" mode=""></image>
+	</view>
 	<!-- 搜索框 -->
 	<view class="dhbox">
 		<image class="sou" src="../../static/icon/sou.png" mode=""></image>
