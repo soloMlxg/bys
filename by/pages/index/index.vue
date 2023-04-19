@@ -32,6 +32,15 @@
 		</swiper> 
 	</view>
 	
+	<!-- 商品list -->
+	<view class="list">
+		<view class="list_nr" @click="golist(ele.Id)" data-id="ele.Id" v-for="(ele,index) in nrs" key="index">
+			<image :src="ele.imageUrl" mode=""></image>
+			<view class="priceStr">{{ele.priceStr}}元</view>
+			<view class="title">{{ele.title}}</view>
+			<view class="goods">{{ele.evaluate}}条好评</view>
+		</view>
+	</view>
 </template>
 
 <script setup>
@@ -51,12 +60,35 @@
 	
 	
 	
+	
 	uni.request({
 		url:"/api/getTypeOne",
 		method:"GET",
 		success: (res) => {
-		    zs.value=res.data
+			zs.value=res.data
 			console.log(zs.value);
+		},
+	})
+	
+	let golist=(id)=>{
+		// console.log(id);
+		uni.navigateTo({
+			url:'/pages/list/list?id='+id,
+			
+		})
+	}
+		
+	let nrs=ref()
+	let num=ref("1")
+	uni.request({
+		url:"/api/hotList",
+		method:"GET",
+		data: {
+		        page: num.value
+		    },
+		success: (res) => {
+			console.log(res);
+			nrs.value=res.data
 		},
 	})
 </script>
