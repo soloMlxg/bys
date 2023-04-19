@@ -1,0 +1,54 @@
+.dhbox{
+	width: 700rpx;
+	height: 80rpx;
+	border-radius: 30rpx;
+	margin: 20rpx auto;
+	background-color: #f4f4f4;
+}
+.sou{
+	display: inline-block;
+	width: 40rpx;
+	height: 40rpx;
+	padding: 0 20rpx 20rpx 10rpx;
+}
+.uni-input{
+	display: inline-block;
+	width: 620rpx;
+	height: 80rpx;
+	border-radius: 30rpx;
+	margin: auto;
+	/* background-color: orange; */
+}
+.imgs,
+.swiper-item{
+	width: 750rpx;
+	height: 330rpx;
+}
+.hots{
+	width: 750rpx;
+	height: 50rpx;
+	position: relative;
+}
+.hots_list{
+	position: absolute;
+	height: 50rpx;
+	white-space: nowrap;
+}
+.hots_list span{
+	display: inline-block;
+	padding: 1rpx 20rpx ;
+	font-size: 14px;
+}
+.hots_imgbox{
+	width: 100rpx;
+	position: absolute;
+	top: 0;
+	right: 0;
+	background-color: white;
+	text-align: center;
+}
+.hots_img{
+	width: 30rpx;
+	height: 30rpx;
+	margin-top: 10rpx;
+}

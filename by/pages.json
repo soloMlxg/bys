@@ -25,6 +25,22 @@
 		    
 		}
     ],
+	"tabBar":{
+		"list":[
+			{
+				"pagePath":"pages/index/index",
+				"text": "首页",
+				"iconPath":"static/icon/shouye.png",
+				"selectedIconPath":"static/icon/shouye1.png"
+			},
+			{
+				// "pagePath":"pages/list/list",
+				// "text": "分类页",
+				// "iconPath":"static/icon/sousuo.png",
+				// "selectedIconPath":"static/icon/sousuo1.png"
+			}
+		]
+	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",
