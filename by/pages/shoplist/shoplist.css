@@ -1,0 +1,43 @@
+.hots{
+	width: 750rpx;
+	height: 50rpx;
+	margin-top: 30rpx;
+	position: relative;
+}
+.hots_list{
+	position: absolute;
+	height: 50rpx;
+	white-space: nowrap;
+}
+.hots_span{
+	display: inline-block;
+	padding: 1rpx 10rpx ;
+	font-size: 18px;
+}
+.listnr{
+	width: 720rpx;
+	margin: auto;
+	margin-top: 50rpx;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.list_xr{
+	width: 309rpx;
+	height: 580rpx;
+}
+.imageUrl{
+	width: 309rpx;
+	height: 380rpx;
+}
+.priceStr{
+	color: red;
+	font-size: 17px;
+}
+.title{
+	font-size: 15px;
+}
+.evaluate{
+	font-size: 12px;
+	color: gray;
+}

@@ -10,17 +10,15 @@
 	
 	<!-- 热门 -->
 	<view class="hots">
-
 		<swiper catchtouchmove>
 		  <swiper-item>
 		    <scroll-view class="hots_list" scroll-x>
-		      <span v-for="(val,index) in zs" key="index">{{val}}</span>
+		      <span @click="gohot(val)" v-for="(val,index) in zs" key="index">{{val}}</span>
 			  <span>&emsp;</span>
 			  <span>&emsp;</span>
 		    </scroll-view>
 		  </swiper-item>
 		</swiper>
-		
 		<view class="hots_imgbox">
 			<image class="hots_img" src="../../static/icon/down.png" mode=""></image>
 		</view>
@@ -28,7 +26,7 @@
 	
 	<!-- 轮播banner	 -->
 	<view class="banners">
-		<swiper change="swiper" indicator-dots indicator-color="orange" indicator-active-color="white" circular autoplay interval="2000">
+		<swiper v-if="Num==0" change="swiper" indicator-dots indicator-color="orange" indicator-active-color="white" circular autoplay interval="2000">
 			<swiper-item class="swiper-item" v-for="(item,index) in imgsArr" key="index">
 				<image class="imgs" :src="item" mode=""></image>
 			</swiper-item>
@@ -48,7 +46,14 @@
 
 <script setup>
 	import { ref } from "vue";
-		
+	import {gets } from "../axios.js"
+	let once=()=>{
+		gets().then(res=>{
+			console.log(res);
+		})
+	}
+		 
+	let Num=ref(0)
 	
 	const zs=ref([])
 	const imgsArr=ref([
@@ -72,28 +77,37 @@
 			console.log(zs.value);
 		},
 	})
+		
+	let gohot=(val)=>{
+		uni.navigateTo({
+			url:"/pages/shoplist/shoplist?vas="+val
+		})
+		console.log(123);
+	}
 	
 	let golist=(id)=>{
 		// console.log(id);
 		uni.navigateTo({
 			url:'/pages/list/list?id='+id,
-			
 		})
 	}
 		
 	let nrs=ref()
-	let num=ref("1")
+	// let num=ref("1")
 	uni.request({
 		url:"/api/hotList",
 		method:"GET",
 		data: {
-		        page: num.value
+		        page: 1
 		    },
 		success: (res) => {
-			console.log(res);
 			nrs.value=res.data
 		},
 	})
+	
+	onload:{
+		once()
+	}
 </script>
 
 <style>

@@ -7,10 +7,19 @@
 			}
 		}
 	    ,{
-            "path" : "pages/list/list",
+	        "path" : "pages/list/list",
+	        "style" :                                                                                    
+	        {
+	            "navigationBarTitleText": "商品详情",
+	            "enablePullDownRefresh": false
+	        }
+	        
+	    }
+		,{
+            "path" : "pages/shoplist/shoplist",
             "style" :                                                                                    
             {
-                "navigationBarTitleText": "商品详情",
+                "navigationBarTitleText": "商品列表",
                 "enablePullDownRefresh": false
             }
             

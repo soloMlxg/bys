@@ -29,10 +29,9 @@
 					<swiper catchtouchmove>
 					  <swiper-item>
 					    <scroll-view class="hots_list" scroll-x>
-							<view class="hots_list_img"  v-for="(el,index) in newnr" key="index">
+							<view class="hots_list_img" @click="golist(el.Id)"  v-for="(el,index) in newnr" key="index">
 								<image class="hots_imgs" :src="el.imageUrl" mode=""></image>
-								<view>{{el.priceStr}}</view>
-								<view>{{el.title}}</view>
+								<view class="hots_priceStr">{{el.priceStr}}元</view>
 							</view>
 					    </scroll-view>
 					  </swiper-item>
@@ -58,13 +57,23 @@
 				</view>
 			</view>
 		</view>
+	
+		<view class="xuanfu"  v-for="(item,index) in str" key="index">
+			<view class="kfs">
+				<image src="../../static/icon/客服.png" mode=""></image>
+				<text>客服</text>
+			</view>
+			<view class="dds yys">
+				单独购买￥{{item.priceStr}}
+			</view>
+			<view class="xxs yys">
+				新人参团￥{{item.priceStr-5}}
+			</view>
+		</view>
 	</view>
 </template>
 
 <script>
-	// onload(option){
-		// console.log(this);
-	// }
 	export default {
 		data() {
 			return {
@@ -91,6 +100,14 @@
 						this.strimg=JSON.parse(res.data[0].imgs).slice(1)
 						this.tleis()
 					},
+				})
+			},
+			
+			golist(id){
+				console.log(id);
+				uni.navigateTo({
+					url:'/pages/list/list?id='+id,
+					
 				})
 			},
 			

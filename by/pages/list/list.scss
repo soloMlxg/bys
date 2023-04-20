@@ -28,7 +28,7 @@
 .pjbox_hd{	
 	width: 700rpx;
 	margin: auto;
-	margin-top: 100rpx;
+	margin-top: 1rpx;
 	padding: 0 0 20rpx 0;
 }
 .tops_img{
@@ -91,24 +91,72 @@
 }
 .hots{
 	width: 750rpx;
-	height: 300rpx;
+	height: 370rpx;
 	position: relative;
 }
 .hots_list{
 	position: absolute;
-	height: 300rpx;
+	height: 370rpx;
 	white-space: nowrap;
 }
 .hots_list view{
 	display: inline-block;
 	padding: 1rpx 20rpx ;
-	font-size: 14px;
 	width: 300rpx;
-	height: 450rpx;
-	text-align:chenter;
 }
 .hots_imgs{
 	width: 200rpx;
 	height: 200rpx;
+	margin-left: 20rpx;
 	display: block;
+}
+.hots_list_img{
+	height: 370rpx;
+}
+.hots_priceStr{
+	color: orange;
+	font-size: 18px;
+	margin-left: 30rpx;
+	margin-top: 30rpx;
+}
+.hots_title{
+	width: 300rpx;
+	overflow: hidden;
+	display: block;
+	font-size: 13px;
+}
+.kfs image{
+	display: block;
+	width: 45rpx;
+	height: 45rpx;
+	margin-top: 10rpx;
+	margin-left: 20rpx;
+}
+.kfs text{
+	font-size: 10px;
+	margin-left: 20rpx;
+}
+.kfs{
+	width: 100rpx;
+	height: 100rpx;
+	border-right: 1px solid gray ;
+}
+.xuanfu{
+	width: 750rpx;
+	height: 100rpx;
+	position: sticky;
+	bottom: 0;
+	background-color: white;
+}
+.xuanfu view{
+	float: left;
+}
+.yys{
+	width: 324rpx;
+	height: 100rpx;
+	text-align: center;
+	line-height: 100rpx;
+}
+.xxs{
+	background-color: slateblue;
 }
