@@ -25,6 +25,15 @@
 		    
 		}
 		,{
+		    "path" : "pages/gouwuche/gouwuche",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "购物车",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+		,{
             "path" : "pages/shoplist/shoplist",
             "style" :                                                                                    
             {
@@ -60,13 +69,19 @@
 			},
 			{
 				"pagePath":"pages/fenlei/fenlei",
-				"text": "分类页",
+				"text": "分类",
 				"iconPath":"static/icon/sousuo.png",
 				"selectedIconPath":"static/icon/sousuo1.png"
 			},
 			{
+				"pagePath":"pages/gouwuche/gouwuche",
+				"text": "购物车",
+				"iconPath":"static/icon/gouwuchekong.png",
+				"selectedIconPath":"static/icon/sousuo1.png"
+			},
+			{
 				"pagePath":"pages/wode/wode",
-				"text": "分类页",
+				"text": "个人",
 				"iconPath":"static/icon/wode.png",
 				"selectedIconPath":"static/icon/wode1.png"
 			}
