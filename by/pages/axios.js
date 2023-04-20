@@ -14,3 +14,11 @@ export const gets=()=>{
 		
 	})
 }
+export const getnr=()=>{
+	return uni.request({
+		url:"/api/getTypeOne",
+		data:{
+			page: 1
+		}
+	})
+}

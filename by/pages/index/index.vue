@@ -4,8 +4,8 @@
 	</view>
 	<!-- 搜索框 -->
 	<view class="dhbox">
-		<image class="sou" src="../../static/icon/sou.png" mode=""></image>
-		<input class="uni-input" focus placeholder="请输入你想要的商品" />
+		<image @click="logins()" class="sou" src="../../static/icon/sou.png" mode=""></image>
+		<input class="uni-input" v-model="inputValue" focus placeholder="请输入你想要的商品" />
 	</view>
 	
 	<!-- 热门 -->
@@ -26,7 +26,7 @@
 	
 	<!-- 轮播banner	 -->
 	<view class="banners">
-		<swiper v-if="Num==0" change="swiper" indicator-dots indicator-color="orange" indicator-active-color="white" circular autoplay interval="2000">
+		<swiper change="swiper" indicator-dots indicator-color="orange" indicator-active-color="white" circular autoplay interval="2000">
 			<swiper-item class="swiper-item" v-for="(item,index) in imgsArr" key="index">
 				<image class="imgs" :src="item" mode=""></image>
 			</swiper-item>
@@ -46,16 +46,30 @@
 
 <script setup>
 	import { ref } from "vue";
-	import {gets } from "../axios.js"
-	let once=()=>{
-		gets().then(res=>{
-			console.log(res);
-		})
-	}
-		 
-	let Num=ref(0)
+	// import { gets,getnr } from "../axios.js"
 	
 	const zs=ref([])
+	const nrs=ref()
+	// let once=()=>{
+	// 	gets().then(res=>{
+	// 		zs.value=res.data
+	// 		console.log(zs.value);
+	// 	})
+	// 	getnr().then(res=>{
+	// 		nrs.value=res.data
+	// 	})
+	// }
+	
+	let inputValue=ref("")
+
+	let logins=()=>{
+		console.log(inputValue.value);
+		uni.navigateTo({
+			// url:"/pages/shoplist/shoplist?vas="+inputValue.value
+			url:"/pages/sout/sout?id="+inputValue.value
+		})
+	}
+	
 	const imgsArr=ref([
 		"http://bfs.biyao.com/group2/M00/2F/72/CghiFmJ0mIuAFuukAABZhbb5iT0605.jpg",
 		"http://bfs.biyao.com/group2/M00/46/FE/CghkFmKfAvqAA13EAABCrIfY964321.jpg",
@@ -82,18 +96,14 @@
 		uni.navigateTo({
 			url:"/pages/shoplist/shoplist?vas="+val
 		})
-		console.log(123);
 	}
 	
 	let golist=(id)=>{
-		// console.log(id);
 		uni.navigateTo({
 			url:'/pages/list/list?id='+id,
 		})
 	}
 		
-	let nrs=ref()
-	// let num=ref("1")
 	uni.request({
 		url:"/api/hotList",
 		method:"GET",
@@ -106,7 +116,7 @@
 	})
 	
 	onload:{
-		once()
+		// once()
 	}
 </script>
 

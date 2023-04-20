@@ -16,13 +16,29 @@
 	        
 	    }
 		,{
+		    "path" : "pages/wode/wode",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "个人中心",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+		,{
             "path" : "pages/shoplist/shoplist",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "商品列表",
                 "enablePullDownRefresh": false
             }
-            
+        }		
+		,{
+            "path" : "pages/sout/sout",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "搜索列表",
+                "enablePullDownRefresh": false
+            }
         }
 		,{
 		    "path" : "pages/fenlei/fenlei",
@@ -43,10 +59,16 @@
 				"selectedIconPath":"static/icon/shouye1.png"
 			},
 			{
-				// "pagePath":"pages/list/list",
-				// "text": "分类页",
-				// "iconPath":"static/icon/sousuo.png",
-				// "selectedIconPath":"static/icon/sousuo1.png"
+				"pagePath":"pages/fenlei/fenlei",
+				"text": "分类页",
+				"iconPath":"static/icon/sousuo.png",
+				"selectedIconPath":"static/icon/sousuo1.png"
+			},
+			{
+				"pagePath":"pages/wode/wode",
+				"text": "分类页",
+				"iconPath":"static/icon/wode.png",
+				"selectedIconPath":"static/icon/wode1.png"
 			}
 		]
 	},

@@ -1,0 +1,64 @@
+.box{
+	width: 750rpx;
+}
+.bigbox{
+	width: 750rpx;
+	height: 250rpx;
+	border-bottom: 1px solid gray;
+}
+.imageUrl{
+	float: left;
+	display: inline-block;
+	width: 300rpx;
+	height: 250rpx;
+}
+.smbox{
+	height: 250rpx;
+	display: inline-block;
+	padding: 0 0 0 10rpx;
+}
+.title{
+	margin-top: 10rpx;
+	font-size: 14px;
+}
+.salePoint{
+	margin-top: 7rpx;
+	width: 420rpx;
+	font-size: 4px;
+	color: gray;
+}
+.supplier{
+	margin-top: 5rpx;
+	font-size: 12px;
+	color: orange;
+}
+.evaluate{
+	margin-top: 8rpx;
+	font-size: 11px;
+	color: gray;
+}
+.priceStr{
+	color: red;
+}
+.dhbox{
+	top: 0;
+	width: 700rpx;
+	height: 80rpx;
+	border-radius: 30rpx;
+	margin: 20rpx auto;
+	background-color: #f4f4f4;
+}
+.sou{
+	display: inline-block;
+	width: 40rpx;
+	height: 40rpx;
+	padding: 0 20rpx 20rpx 10rpx;
+}
+.uni-input{
+	display: inline-block;
+	width: 620rpx;
+	height: 80rpx;
+	border-radius: 30rpx;
+	margin: auto;
+	/* background-color: orange; */
+}
